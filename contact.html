@@ -25,8 +25,41 @@
     </ul>
   </Nav>
 </header>
-<main>
-    <h1>contactez-nous</h1>
+    <main class="contact-container">
+    <section class="contact-info">
+        <h1>Contactez-moi</h1>
+        <p>Je suis basée à <strong>Lubumbashi</strong>. N'hésitez pas à me joindre pour toute collaboration ou opportunité.</p>
+
+        <div class="detail-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <span>Messagerie</span>
+            <p><span class="whatsapp-text">WhatsApp</span> : 0991090651</p>
+          </div>
+        </div>
+
+       <div class="detail-item">
+         <i class="fab fa-telegram-plane"></i>
+         <div>
+           <span>Messagerie</span>
+           <p><span class="telegram-text">Telegram</span> : 0991090651</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <form action="#">
+            <div class="form-group">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Téléphone</label>
+                <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer</button>
+        </form>
+    </section>
 </main>
 <footer>
   <div><p>&copy; 2026 Dimercia, tous droits réservés.</p></div>
