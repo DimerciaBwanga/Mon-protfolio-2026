@@ -230,7 +230,7 @@ main {
 
 .projets h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 50px;
     color: #6C63FF;
     margin-bottom: 50px;
 }
@@ -246,9 +246,21 @@ main {
 }
 
 .projets {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+}
+
+.rang1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rang2{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
@@ -259,6 +271,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 350px;
     transition: 0.3s;
     
 }
@@ -299,7 +312,7 @@ main {
 
 .tags span {
     display: inline-block;
-    background: #eef0ff;
+    border: 1px solid var(--gris-clair);
     color: #6C63FF;
     font-size: 12px;
     padding: 5px 10px;
@@ -376,6 +389,7 @@ main {
     gap: 1rem;
     background: #ffffff;
     padding: 1.2rem;
+    margin: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
@@ -488,4 +502,213 @@ main {
     .contact-info .subtitle {
         text-align: center;
     }
+}
+
+/* --- Styles spécifiques à la page Passions (Thème Violet) --- */
+
+.passions-header {
+    text-align: center;
+    padding: 60px 20px;
+    /* Utilisation d'un dégradé très léger basé sur ton gris clair */
+    background: linear-gradient(135deg, var(--gris-tres-clair) 0%, var(--gris-clair) 100%); 
+    margin-bottom: 40px;
+}
+
+.passions-header h1 {
+    font-size: 50px;
+    color: var(--violet-doux); /* Ton violet pour le titre */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    display: inline-block; /* Pour que le soulignement s'adapte à la taille du texte */
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Le petit soulignement sous le titre */
+.passions-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    border-radius: 2px;
+}
+
+.passions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.passion-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    width: 280px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Remplacement du bleu par ton violet doux */
+    border-bottom: 4px solid var(--violet-doux); 
+}
+
+.passion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2); /* Ombre teintée violette */
+}
+
+.passion-icon {
+    font-size: 3rem;
+    color: var(--violet-doux); /* Icônes en violet */
+    margin-bottom: 20px;
+}
+
+.passion-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--violet-fonce); /* Violet foncé pour plus de lisibilité */
+}
+
+.passion-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gris-fonce); /* Utilisation de ton gris foncé */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .passion-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* --- Nouveau Style Divertissements (V2) --- */
+
+.divertissement-v2 {
+    padding: 80px 20px;
+    background-color: var(--gris-tres-clair);
+}
+
+.div-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.div-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 100px 30px 30px 100px; /* Forme pilule élégante */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.div-item:hover {
+    transform: translateX(15px); /* Glissement vers la droite au survol */
+    border-color: var(--violet-doux);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.1);
+}
+
+.div-circle {
+    min-width: 100px;
+    height: 100px;
+    background-color: var(--violet-doux);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(108, 99, 255, 0.3);
+    margin-right: 30px;
+    transition: transform 0.4s ease;
+}
+
+.div-item:hover .div-circle {
+    transform: rotate(360deg); /* Rotation de l'icône au survol */
+    background-color: var(--violet-fonce);
+}
+
+.div-circle i {
+    color: white;
+    font-size: 2.2rem;
+}
+
+.div-text h3 {
+    color: var(--violet-doux);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.div-text p {
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* --- Ajustement du titre --- */
+.divertissement-v2 h1 {
+    color: var(--violet-doux);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.divertissement-v2 h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 15px auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .div-item {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 30px;
+        padding: 40px 20px;
+    }
+    
+    .div-circle {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .div-item:hover {
+        transform: translateY(-10px); /* Sur mobile, on monte au lieu d'aller à droite */
+    }
+}
+
+.pro {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: #6C63FF;
+    margin-bottom: 50px;
+}
+
+.pro::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #6C63FF;
+    display: block;
+    margin: 10px auto ;
+    border-radius: 5px;
 }
